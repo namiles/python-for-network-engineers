@@ -1,11 +1,9 @@
+
 # single line comment
 
 ''' multi
     line   
     comment '''
-
-print('hello world')
-print() #blank line
 
 #-------------------------------------------------------------#
 
@@ -17,7 +15,7 @@ print() #blank line
 # - cannot use reserved words (False, None, True, and, as, assert, break, class, continue, def, del, elif, else, except, for, if, is, or, not, pass, return, etc.)
 # Variables are auto typed, meaning python sets it as a string, int, bool, etc automatically.
 
-age = 23
+age = 99
 name = "nick"
 isTrue = True
 print("Hi my name is " + name + " and I am " + str(age) + " years old and this is " + str(isTrue) + ".")

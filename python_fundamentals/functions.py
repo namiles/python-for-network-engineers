@@ -17,7 +17,6 @@ def my_function():
 print()
 my_function() # call the function
 print()
-help(my_function) # see what a function does
 
 def my_addition(arg1, arg2):
     sum = arg1 + arg2
@@ -39,4 +38,4 @@ print(my_sub(arg2=15, arg1=10))
 print()
 
 # Unknown amount of arguments - Functions can use * or ** (*args or *kwargs) to defiine a number of arguments or keyword arguments
-say_hello("caleb", "nick", "erik", "justin")
+say_hello("caleb", "nick", "jasper", "justin")
