@@ -8,12 +8,14 @@
 #-------------------------------------------------------------#
 
 # Variables
+# - all lowercase, or all UPPERCASE
 # - must start with a letter or underscore
 # - cannot start with a number
 # - can only consist of alphanumeric characters and underscores (a-z, A-Z, 0-9, _ underscores except for beginning, )
 # - case sensitive
 # - cannot use reserved words (False, None, True, and, as, assert, break, class, continue, def, del, elif, else, except, for, if, is, or, not, pass, return, etc.)
 # Variables are auto typed, meaning python sets it as a string, int, bool, etc automatically.
+# Python is a dynamically typed language.
 
 age = 99
 name = "nick"
