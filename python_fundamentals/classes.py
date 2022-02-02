@@ -23,7 +23,7 @@ class Router:
         self.ip_address = s
         print('IP address updated')
 
-# Switch class is deribed from Router class
+# Switch class is derived from Router class
 class Switch(Router):
     def getInfo(self):
         '''Returns information about Switch'''

@@ -8,7 +8,7 @@ String formatting
 
 print()
 
-print("String formarring using old way - %")
+print("String formatting using old way - %")
 print("-----------------------------------------------------")
 # Old way using %
 # This method is not ideal because code readability suffers with long code.
@@ -20,7 +20,7 @@ print(message1)
 
 print()
 
-print("String formarring using .format")
+print("String formatting using .format")
 print("-----------------------------------------------------")
 # newer way using str.format()
 dns = "8.8.8.8"
@@ -34,7 +34,7 @@ print(ping2.format(dns, vrf))
 
 print()
 
-print("String formarring using f strings, or string literals")
+print("String formatting using f strings, or string literals")
 print("-----------------------------------------------------")
 # String interpolation/f-string (python 3.6+)
 # Lets you embed python expressions inside strings
@@ -48,6 +48,3 @@ def greet(name, question):
 print(greet('nick','How are you?'))
 
 print()
-
-print(__name__)
-print(type(__name__))
