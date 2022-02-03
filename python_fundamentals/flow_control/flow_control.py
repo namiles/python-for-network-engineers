@@ -23,9 +23,3 @@ while c != 0:
 # while True:
 #     pass
 
-#Python does not support do..while or while..do loops. Must use While loops with breaks.
-while True:
-    response = input("Enter digits: ")
-    if int(response) % 7 == 0:
-        break
-
