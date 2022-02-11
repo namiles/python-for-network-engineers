@@ -28,7 +28,10 @@ print(type(b'hello'))
 
 print("\nLists",  "-" * 80)
 
-##### Lists - mutable, sequences of objects #####
+'''
+Lists - mutable, sequences of objects
+Ordered, unlike Dicts
+'''
 list1 = [1,2,3]
 list2 = ["apple", "orange", "banana"]
 list3 = [1, "apple", {"name":"nick"}]
@@ -43,16 +46,18 @@ print(list2.index("orange"))
 
 print("\nDicts", "-" * 80)
 
-##### Dicts - maps keys to values #####
+'''
+Dicts - Maps keys to values
+Values are accessible by keys
+Keys must be unique in a single dict
+Keys must be immutable
+Values can be immutable
+Order is not important, unless you're using an OrderedDict
+'''
 dict1 = {
     "key1":"value1",
     "key2":"value2",
 }
-# Values are accessible by keys
-# Keys must be unique in a single dictionary
-# Keys must be immutable
-# Values can be immutable
-# Order is not important in dicts
 print(dict1["key1"])
 #the dict constructor can be used to convert to dictionaries:
 names_and_ages = [('Alice', 32), ('Bob', 24), ('Charlies', 42)]
@@ -61,9 +66,11 @@ converted_dict = dict(names_and_ages)
 print(converted_dict)
 
 print("\nTuples", "-" * 80)
-
-##### Tuples - immutable sequences of objects, cannot be changed once created #####
-# Tuples can contain any object
+'''
+Tuples - Immutable sequence of objects
+Cannot be changed once created
+Can contain any obeject
+'''
 tuple1 = ("this", "this", "a", "tuple", 1)
 print(tuple1)
 print(tuple1[0])
@@ -82,10 +89,11 @@ print(type(empty_tuple))
 
 
 print("\nSets", "-" * 80)
-
-##### Sets - unordered collection of unique elements #####
-# sets are mutable
-# Elements in a set must be immutable
+'''
+Sets - unordered collection of unique elements
+Sets are mutable, or able to be changed
+Elements in a set must be immutable
+'''
 set1 = {6, 28, 496, 8128}
 print(set1)
 # Must uses set() constructor to create an empty set since dicts also use {}
