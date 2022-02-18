@@ -39,3 +39,39 @@ print(numeric_list)
 print("Minimum Value:", min(numeric_list))
 print("Maximum Value:", max(numeric_list))
 
+'''
+Appending, Extending, and Inserting Lists
+
+append() - Add a single element to the end of a list
+extend() - Add elements of an interable, such as another list, to an existing list. You can extend with strings since they are iterable.
+insert() - 
+'''
+print("\nAppending, Extending, and Inserting")
+list_of_devices = ["EdgeRouter", "CoreSwitch", "Distro1", "Distro2"]
+print("Base List",list_of_devices)
+
+# Append Access1 to the end
+list_of_devices.append("Access1")
+print("Appended:",list_of_devices)
+
+access_switches = ["Access2","Access3"]
+list_of_devices.extend(access_switches)
+print("Extended:",list_of_devices)
+
+# Insert Distro3 after existing two Distro elements
+list_of_devices.insert(4, "Distro3")
+print("Inserted:", list_of_devices)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
