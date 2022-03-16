@@ -78,3 +78,54 @@ print(device3)
 print("keys:", device3.keys())
 print("values:", device3.values())
 print("items:", device3.items())
+
+
+'''
+Iterating over Dictionaries
+'''
+print("\nIterating over Dicts")
+device_info = {
+    "device_type": "router",
+    "model": "xr",
+    "serial": "SDF12454",
+}
+
+# Iterating over Keys
+print("-- for keys in device_info.keys():")
+for key in device_info.keys():
+    print(key)
+
+# Iterating over Values
+print("-- for keys in device_info.values():")
+for value in device_info.values():
+    print(value)
+
+# Iterating over Keys and Values
+print("-- for keys in device_info.items():")
+for k,v in device_info.items():
+    print(f"The {k} key has a value of {v}")
+
+
+'''
+Unpacking Dictionaries
+'''
+print("\nUnpacking Dicts")
+switch1_info = {
+    "device_type": "switch",
+    "hostname": "S1",
+    "model": "catalyst",
+    "serial": "CCS12454",
+}
+
+switch2_info = {
+    "device_type2": "switch",
+    "hostname2": "S2",
+    "model2": "catalyst",
+    "serial2": "CCS15464",
+}
+
+# Because dicts must have unique keys, I added a "2" at the end of the switch2_info keys
+# to demonstrate dict unpacking.
+all_switches = {**switch1_info, **switch2_info}
+print(all_switches)
+
