@@ -1,6 +1,6 @@
 """
-Functions are constructs in programming that allows code to be broken up inside functional pieces.
-This helps code maintain reusability and modularity.
+Functions are constructs in programming that allows code to be broken up into functional pieces.
+This helps maintain code reusability and modularity.
 
 In Python, Functions can be a few things:
 - Built-in --> Functions that are built into python
@@ -9,14 +9,14 @@ In Python, Functions can be a few things:
 
 ** All functions in Python must return something **
 
-Syntax Tips
+Syntax
 - Must not start with a number
 - Must not be a reserved python word such as print, input, type, etc.
 - Can be any combination of letters, numbers, underscores, or dashes.
-- Create with the "def" keyword
+- Create with the "def" keyword (Ex: def get_hostname(): )
 
 
-PEP 8 styling for functions
+PEP8 Styling for Functions
 - Lowercase with words separated by underscores (Ex: retrieve_device_statistics())
 - Use one leading underscore for non-public methods and instance variables (Ex: _get_devices())
 
@@ -35,7 +35,7 @@ def my_addition(arg1, arg2):
     return sum  # pass an arugment back to code that calls function
 
 
-def my_sub(arg1, arg2):
+def my_subtraction(arg1, arg2):
     result = arg1 - arg2
     return result
 
@@ -50,17 +50,13 @@ def say_hello(*args):
 
 
 def main():
-    """
-    Main funcions
-    """
-
     # Call the function
     my_function()
 
     print(my_addition(5, 5))
 
     # Keyword Arguments - used when arguments are not in consistent order
-    print(my_sub(arg2=15, arg1=10))
+    print(my_subtraction(arg2=15, arg1=10))
 
     say_hello("caleb", "nick", "jasper", "justin")
 
