@@ -1,41 +1,69 @@
+"""
+Functions are constructs in programming that allows code to be broken up inside functional pieces.
+This helps code maintain reusability and modularity.
 
-# Functions
-# - must not start with a number
-# - must not be a reserved python word such as print, input, type, etc.
-# - can be any combination of letters, numbers, underscores, or dashes.
-# - create with the "def" keyword
+In Python, Functions can be a few things:
+- Built-in --> Functions that are built into python
+- 3rd Party --> Functions proivded by 3rd party libraries/modules
+- Customer --> Functions a developer can define and use
 
-# PEP 8 styling for functions
-# - Lowercase with words separated by underscores
-# - use one leading underscore for non-public methods and instance variables
+** All functions in Python must return something **
+
+Syntax Tips
+- Must not start with a number
+- Must not be a reserved python word such as print, input, type, etc.
+- Can be any combination of letters, numbers, underscores, or dashes.
+- Create with the "def" keyword
+
+
+PEP 8 styling for functions
+- Lowercase with words separated by underscores (Ex: retrieve_device_statistics())
+- Use one leading underscore for non-public methods and instance variables (Ex: _get_devices())
+
+"""
 
 # Create the function
 def my_function():
-    '''Prints "hello my function"''' #First line of a function block, called a docstring - used to describe what a function does
-    print("Hello my function")
+    """
+    Prints "hello, this is my_function()" --> docstring
+    """
+    print("Hello, this is my_function()")
 
-print()
-my_function() # call the function
-print()
 
 def my_addition(arg1, arg2):
     sum = arg1 + arg2
-    return sum # pass an arugment back to code that calls function
+    return sum  # pass an arugment back to code that calls function
+
 
 def my_sub(arg1, arg2):
     result = arg1 - arg2
     return result
 
+
+"""
+Unknown amount of arguments
+Functions can use * or ** (*args or *kwargs) to defiine a number of arguments or keyword arguments
+"""
 def say_hello(*args):
     for arg in args:
-        print("hello ", arg,"!", sep="")
+        print("hello ", arg, "!", sep="")
 
-print(my_addition(5,5))
-print()
 
-# Keyword Arguments - used when arguments are not in consistent order
-print(my_sub(arg2=15, arg1=10))
-print()
+def main():
+    """
+    Main funcions
+    """
 
-# Unknown amount of arguments - Functions can use * or ** (*args or *kwargs) to defiine a number of arguments or keyword arguments
-say_hello("caleb", "nick", "jasper", "justin")
+    # Call the function
+    my_function()
+
+    print(my_addition(5, 5))
+
+    # Keyword Arguments - used when arguments are not in consistent order
+    print(my_sub(arg2=15, arg1=10))
+
+    say_hello("caleb", "nick", "jasper", "justin")
+
+
+if __name__ == "__main__":
+    main()
