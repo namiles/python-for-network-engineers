@@ -30,6 +30,15 @@ def my_function():
     print("Hello, this is my_function()")
 
 
+"""
+The Return statement is used to return a value
+All functions must return something
+If not return is specified, None is return by defaut.
+"""
+def generate_email(username, provider="gmail"):
+    email = f"{username}@{provider}.com"
+    return email
+
 def my_addition(arg1, arg2):
     sum = arg1 + arg2
     return sum  # pass an arugment back to code that calls function
@@ -48,9 +57,16 @@ def say_hello(*args):
     for arg in args:
         print("hello ", arg, "!", sep="")
 
+"""
+Default values can be used in Function Arguments
+"""
+def say_goodbye(name="default"):
+    print(f"Goodbye {name}!")
+
+
 
 def main():
-    # Call the function
+    # Simply call functions by referencing them
     my_function()
 
     print(my_addition(5, 5))
@@ -59,6 +75,12 @@ def main():
     print(my_subtraction(arg2=15, arg1=10))
 
     say_hello("caleb", "nick", "jasper", "justin")
+    say_goodbye() # No name is passed in, so the value of name will be "default" as specified in the function.
+
+    # generated_email will contain the value returned from the generate_email() function
+    generated_email = generate_email("pythonguy")
+    print(generated_email)
+
 
 
 if __name__ == "__main__":
