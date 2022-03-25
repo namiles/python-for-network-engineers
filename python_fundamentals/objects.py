@@ -1,4 +1,4 @@
-# Python ceates an int object of 1000, and makes the variable x point to that object
+# Python creates an int object of 1000, and makes the variable x point to that object
 x = 1000
 
 # "Assigning" x to a new value does not change the int 1000 object, but creates a new int object and points x at it.
