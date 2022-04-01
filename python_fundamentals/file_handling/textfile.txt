@@ -1,7 +1,4 @@
-This is line 1.
+This is line one.
 This is line two
 This is line three.
-This is line number 4, adding using python.
-This line was added using python.
-This line was added using python.
-This line was added using python.
+This is line four.

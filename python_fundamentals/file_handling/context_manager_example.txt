@@ -1,0 +1,8 @@
+This is the text file used to demonstrate using context managers to open and close files.
+This line was added using python.
+This line was added using python.
+This line was added using python.
+This line was added using python.
+This line was added using python.
+This line was added using python.
+This line was added using python.
