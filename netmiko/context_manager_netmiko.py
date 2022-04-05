@@ -12,15 +12,14 @@ def main():
         "port": 22,
     }
 
-    # Establish SSH connection, passing in the device dictionary
-    net_connect = ConnectHandler(**ios_xe)
+    """
+    There is no need to call the disconnect needed when using a context manager.
+    It will automatically call the disconnect method when finished.
+    """
+    with ConnectHandler(**ios_xe) as net_connect:
+        output = net_connect.send_command("show ip int brief")
 
-    # Run "show ip int brief" command and print the output
-    output = net_connect.send_command("show ip int brief")
     print(output)
-
-    # Disconnect from SSH Session
-    net_connect.disconnect()
 
 
 if __name__ == "__main__":
