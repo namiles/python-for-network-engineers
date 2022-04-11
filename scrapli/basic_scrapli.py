@@ -1,30 +1,35 @@
-from scrapli.driver.core import IOSXEDriver
+from scrapli import Scrapli
 
 """
-This example shows basic Scrapli usage without using a context manager.
+This example uses Scrapli's factory class to dynamically select the approriate driver
+(IOSXEDriver, NXOSDriver, etc) based on the platform string in the below ios_xe dictionary.
+
+Platform options:
+- cisco_iosxe
+- cisco_nxos
+- cisco_iosxr
+- arista_eos
+- juniper_junos
+
+See iosxe_driver_example.py for an example uisng the IOSXEDriver with the DevNet sandbox.
 """
 
 
 def main():
-    # Device
     ios_xe = {
         "host": "sandbox-iosxe-latest-1.cisco.com",
         "auth_username": "developer",
         "auth_password": "C1sco12345",  # This password is publicly available.
         "auth_strict_key": False,
+        "platform": "cisco_iosxe",
     }
 
-    conn = IOSXEDriver(**ios_xe)
+    with Scrapli(**ios_xe) as conn:
+        prompt = conn.get_prompt()
+        response = conn.send_command("show ip int brief")
 
-    # Open the connection
-    conn.open()
-
-    # Issue the "show ip int brief" command and print its output
-    response = conn.send_command("show ip int brief")
+    print(prompt)
     print(response.result)
-
-    # Close the connection
-    conn.close()
 
 
 if __name__ == "__main__":
