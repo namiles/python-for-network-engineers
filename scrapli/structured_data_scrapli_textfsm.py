@@ -1,17 +1,10 @@
+import json
 from scrapli import Scrapli
 
 """
-This example uses Scrapli's factory class to dynamically select the approriate driver
-(IOSXEDriver, NXOSDriver, etc) based on the platform string in the below ios_xe dictionary.
+Scrapli supports both TextFSM and Genie for parsing command output into structured data.
 
-Platform options:
-- cisco_iosxe
-- cisco_nxos
-- cisco_iosxr
-- arista_eos
-- juniper_junos
-
-See iosxe_driver_example.py for an example uisng the IOSXEDriver with the DevNet sandbox.
+This example uses textfsm to parse the "show ip int brief" command.
 """
 
 
@@ -25,11 +18,13 @@ def main():
     }
 
     with Scrapli(**ios_xe) as conn:
-        prompt = conn.get_prompt()
         response = conn.send_command("show ip int brief")
+        parsed_output = response.textfsm_parse_output()
 
-    print(prompt)
-    print(response.result)
+    print(json.dumps(parsed_output, indent=4))
+
+    for interface in parsed_output:
+        print(f"{interface['intf']} has an IP Address of {interface['ipaddr']}")
 
 
 if __name__ == "__main__":
