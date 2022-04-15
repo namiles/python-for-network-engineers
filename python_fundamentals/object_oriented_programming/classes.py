@@ -20,6 +20,10 @@ class Router:
         self.ip_address = ip_address
         self.location = location
 
+    # Commonly used to make a readable representation of an object
+    def __str__(self):
+        return "I am an instance of the router class"
+
     # Functions defined inside of a class are known as methods.
     def getInfo(self):
         """Returns information about router"""
@@ -54,6 +58,7 @@ def main():
     print()
 
     r1 = Router("Cisco 2911", "15.6.7", "10.1.1.135", "Rack 24")
+    print(r1) # Prints what is returned in the __Str__ method
     print(r1.getInfo())
     print()
     r2 = Router("Cisco 1911", "12.2", "10.1.1.136", "Rack 25")
