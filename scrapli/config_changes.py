@@ -1,11 +1,12 @@
 from scrapli.driver.core import IOSXEDriver
 
 """
-This example uses three Cisco csr1000v devices I have in a simulated lab.
+Sending configuration commands with Scrapli
 
-R1 = 192.168.40.99
-R2 = 192.168.40.148
-R3 = 192.168.40.227
+send_config - Acepts a string
+send_configs - Accepts a list of strings
+send_configs_from_file - Accepts a path to a file
+
 """
 
 
@@ -31,13 +32,16 @@ def main():
         },
     ]
 
+    ospf_config = [
+        "router ospf 1",
+        "passive-interface GigabitEthernet 1",
+        "network 0.0.0.0 0.0.0.0 area 0"
+    ]
+
     for device in devices:
         with IOSXEDriver(**device) as conn:
-            prompt = conn.get_prompt()
-            response = conn.send_command("show ip int brief")
-        print(prompt)
+            response = conn.send_configs(ospf_config)
         print(response.result)
-        print()
 
 
 if __name__ == "__main__":

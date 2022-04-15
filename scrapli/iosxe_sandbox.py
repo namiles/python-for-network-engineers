@@ -1,8 +1,8 @@
 from scrapli import Scrapli
 
 """
-This example uses Scrapli's factory class to dybanically select the approriate driver
-(IOSXEDriver, NXOSDriver, etc) based on the platform string in the below dictionary.
+This example uses Scrapli's factory class to dynamically select the approriate driver
+(IOSXEDriver, NXOSDriver, etc) based on the platform string in the below ios_xe dictionary.
 
 Platform options:
 - cisco_iosxe
