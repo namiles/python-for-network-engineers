@@ -1,24 +1,35 @@
-class Person:
-    def __init__(self, fname, lname):
-        self.firstname = fname
-        self.lastname = lname
+"""
+Inhertience applies to objects with a Is-A relationship.
 
-    def printname(self):
-        print(self.firstname, self.lastname)
+For example, a French Bulldog IS A Dog.
+"""
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def sounds(self):
+        return "Woof"
 
 
-class Student(Person):
-    pass
+class FrenchBulldog(Dog):
+    def __init__(self, name, age):
+        super().__init__(name, age)
 
+    def breathing(self):
+        return "Gremlin"
+
+    # Ovveride a method from the parent object
+    # This method ovverrides the parent method because it is more specific to the derived class
+    def sounds(self):
+        return "wooooooooof"
 
 def main():
-    # Use the Person class to create an object, and then execute the printname method:
-    x = Person("John", "Doe")
-    x.printname()
-
-    y = Student("Mike", "Olsen")
-    print(y.firstname)
-    y.printname()
+    my_dog = FrenchBulldog("murphy", "2")
+    print(my_dog.name)
+    print(my_dog.age)
+    print(my_dog.sounds())
 
 
 if __name__ == "__main__":

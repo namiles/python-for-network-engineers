@@ -5,6 +5,12 @@ There are built-in classes in Python. A string, for example, is one of them.
 Classes are defined using the "class" keyword, and class names follow the CamelCase convention
 """
 
+import random
+
+models = ["1000v","2911"]
+swversions = ["15.1","16.1","17.1","18.1"]
+ip_addresses = ["10.1.1.1","10.1.1.2","10.1.1.3","10.1.1.4"]
+locations = ["Floor1", "Floor2", "Floor3", "Basement"]
 
 class Router:
     """Class used to describe routers"""
@@ -40,6 +46,7 @@ class Router:
         """Set the IP address of the device"""
         self.ip_address = s
 
+
     """
     Private Membership
 
@@ -64,6 +71,7 @@ class Router:
     def get_location(self):
         return self._location
 
+
     """
     Property Decorators
 
@@ -83,10 +91,45 @@ class Router:
         self._location = new_loc
 
 
+    """
+    Static Methods
+
+    A static method is a method that CAN NOT modify the state of an object/instance of a class.
+    Static methods are good for when you want to create something that can't modify an object, but you
+    don't want to create a separate function.
+
+    Static methods are only tied to an object conceptually, and don't actuall have access to the object.
+    Do not have to pass in "self"
+
+    Indicated by @staticmethod
+    """
+    @staticmethod
+    def random_router():
+        """
+        staticmethods are commonly used as factory methods to create new instances of a class.
+        This is an example of a factory method using the Router class.
+        """
+        return Router(random.choice(models),random.choice(swversions),random.choice(ip_addresses),random.choice(locations))
+
+
+    """
+    Class Methods
+
+    Class methods do not have access to an instance of a class and cannot modify it, but they do have access to
+    the class itself.
+
+    Indicated by @classmethod
+    """
+    @classmethod
+    def device_type(cls):
+        return cls.device_type
+
+
 """
 Inheritance
-"""
 
+Inheritance allows new classes to be derived from other classes.
+"""
 
 class Switch(Router):
     """Switch class is derived from Router class"""
@@ -120,8 +163,6 @@ def main():
     print(s1.getInfo())
 
     print()
-
-    print(dir(Router))
 
 
 if __name__ == "__main__":
