@@ -7,7 +7,7 @@ In Python, Functions can be a few things:
 - 3rd Party --> Functions proivded by 3rd party libraries/modules
 - Customer --> Functions a developer can define and use
 
-** All functions in Python must return something **
+** All functions in Python must return something, by default that is None **
 
 Syntax
 - Must not start with a number
