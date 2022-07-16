@@ -1,4 +1,8 @@
-from netmiko import ConnectHandler, NetMikoAuthenticationException, NetMikoTimeoutException
+from netmiko import (
+    ConnectHandler,
+    NetMikoAuthenticationException,
+    NetMikoTimeoutException,
+)
 from netmiko import ConnLogOnly
 
 
@@ -19,7 +23,7 @@ def main():
     - ConnLogOnly either returns a Netmiko object, or None if the connection fails
     - Generate a log file when failures occur
     """
-    
+
     # Before:
     # try:
     #     conn = ConnectHandler(**device)
