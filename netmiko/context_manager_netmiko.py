@@ -1,4 +1,3 @@
-from black import out
 from netmiko import ConnectHandler
 
 
