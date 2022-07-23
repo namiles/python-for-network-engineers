@@ -12,11 +12,8 @@ def main():
         "port": 22,
     }
 
-    """
-    There is no need to call the disconnect needed when using a context manager.
-    It will automatically call the disconnect method when finished.
-    """
     with ConnectHandler(**ios_xe) as net_connect:
+        # textfsm is built into netmiko, and can be used to parse command output into structured data
         output = net_connect.send_command("show ip int brief", use_textfsm=True)
 
     # Print in pretty format
