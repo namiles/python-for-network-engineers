@@ -1,4 +1,6 @@
-router bgp {{BGP.ASN}}
+router bgp {{ BGP.ASN }}
   {% for peer in BGP.peers %}
-  neighbor {{peer.neighbor}} remote-as {{peer.peer_asn}}
+  {% if peer.neighbor != "10.0.0.4" %}
+  neighbor {{ peer.neighbor }} remote-as {{ peer.peer_asn }}
+  {% endif %}
   {% endfor %}
