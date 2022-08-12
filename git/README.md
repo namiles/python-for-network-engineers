@@ -131,7 +131,7 @@ Git rebase helps keep the git timeline clean, and actually re-writes the the git
 
 The general rule of thumb is to use rebase if using a private repository, and merge when using public repositories.
 
-### The .gitignore File
+## The .gitignore File
 .gitignore is a special file in Git repositories that can be used to prevent Git from tracking certain files or directories within the local repository. For example, if you have a file that you are only using for testing, you can add it to a .gitignore file and Git will not asssociate it with the repository.  
 
 In the .gitignore file for this repository, I have the below files/directories:
