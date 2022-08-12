@@ -104,4 +104,12 @@ Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 python-for-network-engineers % git branch -D new_feature_branch
 Deleted branch new_feature_branch (was 08a5be3).
-```
+```   
+
+## Git Merge and Git Rebase   
+Git merge and git rebase are both commands that can be used to move changes from branches to the master/main branch. However, each one has different uses.   
+
+### Git Merge   
+
+
+### Git Rebase   
