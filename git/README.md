@@ -30,7 +30,48 @@ To add files to be tracked by Git, use the ```git add``` command.
 To make a commit, use ```git commit -m {comment}```   
  - The "-m" option is used to add a comment to the commit.   
 
+In the below example, I add some changes to be tracked, create a commit, then push it to the remote repostiroy on Github.
+```bash
+python-for-network-engineers % git status
+On branch master
+Your branch is up to date with 'origin/master'.
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   git/README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+python-for-network-engineers % git add .
+python-for-network-engineers % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   git/README.md
+
+python-for-network-engineers % git commit -m "update git README"
+[master 28d6a24] update git README
+ 1 file changed, 31 insertions(+)
+python-for-network-engineers % git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+python-for-network-engineers % git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.50 KiB | 1.50 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/namiles/python-for-network-engineers.git
+   08a5be3..28d6a24  master -> master
+python-for-network-engineers %
+```
 
 ## Git Logs   
 Git logs can be used to see the record of changes made, or commits, in a repository. To view the log, use ```git log```. To view the git log in a more concise format, use ```git log --oneline```.    
