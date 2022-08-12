@@ -31,7 +31,7 @@ To make a commit, use ```git commit -m {comment}```
  - The "-m" option is used to add a comment to the commit.   
 
 In the below example, I add some changes to be tracked, create a commit, then push it to the remote repostiroy on Github.
-```bash
+```zsh
 python-for-network-engineers % git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -90,7 +90,7 @@ To create AND switch to a branch, use ```git checkout -b {branch}```.
 To FORCE delete a branch, use ```git branch -D {branch}```.   
 
 In the below example, I create and switch to a new branch called "new_feature_branch", list the branches, switch back to the master branch, then delete the "new_feature_branch" branch.
-```bash
+```zsh
 python-for-network-engineers % git branch
 * master
 python-for-network-engineers % git checkout -b new_feature_branch
@@ -113,4 +113,21 @@ Git merge and git rebase are both commands that can be used to move changes from
 To merge changes in a branch to the master/main branch, you want to be in the master branch, or where you want the changes to be brought to.   
 Then, use ```git merge {branch}```. This will merge any changes in the specified branch into the master/main branch.
 
+```zsh
+python-for-network-engineers/git (git_merge_readme) » git checkout master                                                                                       nmiles@Nicks-MacBook-Pro
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+python-for-network-engineers/git (master) » git merge git_merge_readme                                                                                          nmiles@Nicks-MacBook-Pro
+Updating 8868b9d..35838ce
+Fast-forward
+ git/README.md | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+```
+
 ### Git Rebase   
+The main difference betweeen **git merge** and **git rebase** is that when using git merge, all of the separate commits are brought over into the master/main branch, which can make the git log muddy and difficult to follow.   
+Git rebase helps keep the git timeline clean, and actually re-writes the the git history for it to be linear and easy to read.   
+
+The general rule of thumb is to use rebase if using a private repository, and merge when using public repositories.
+
