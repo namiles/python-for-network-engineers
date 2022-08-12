@@ -110,6 +110,7 @@ Deleted branch new_feature_branch (was 08a5be3).
 Git merge and git rebase are both commands that can be used to move changes from branches to the master/main branch. However, each one has different uses.   
 
 ### Git Merge   
-
+To merge changes in a branch to the master/main branch, you want to be in the master branch, or where you want the changes to be brought to.   
+Then, use ```git merge {branch}```. This will merge any changes in the specified branch into the master/main branch.
 
 ### Git Rebase   
