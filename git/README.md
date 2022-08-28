@@ -1,8 +1,6 @@
 # Version Control with Git   
 Version Control, [Git](https://git-scm.com/) in this case, is an extremely useful tool to learn when doing development work. This section covers some essential Git basics.
 
-<<<<<<< HEAD
-=======
 ## Installing Git and Setup 
 Documentation for intalling Git can be found [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)   
 
@@ -116,11 +114,11 @@ To merge changes in a branch to the master/main branch, you want to be in the ma
 Then, use ```git merge {branch}```. This will merge any changes in the specified branch into the master/main branch.
 
 ```zsh
-python-for-network-engineers/git (git_merge_readme) » git checkout master                                                                                       nmiles@Nicks-MacBook-Pro
+python-for-network-engineers/git (git_merge_readme) » git checkout master
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
-python-for-network-engineers/git (master) » git merge git_merge_readme                                                                                          nmiles@Nicks-MacBook-Pro
+python-for-network-engineers/git (master) » git merge git_merge_readme
 Updating 8868b9d..35838ce
 Fast-forward
  git/README.md | 11 ++++++++++-
@@ -142,4 +140,3 @@ python-for-network-engineers (master*) » cat .gitignore
 __pycache__
 .venv/
 ```
->>>>>>> 0a8e295a148e1127a1c83612f5c8e35e3852fbae
