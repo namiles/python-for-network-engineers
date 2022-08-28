@@ -44,7 +44,9 @@ def main():
     }
 
     # Can double-check our HTTP body using this debug; great for learning
-    import json; print(json.dumps(add_pools, indent=2))
+    import json
+
+    print(json.dumps(add_pools, indent=2))
 
     # Issue HTTP POST request to a similar URL used for the GET request,
     # except carrying the new DHCP pool in the HTTP body. Also, we don't need
