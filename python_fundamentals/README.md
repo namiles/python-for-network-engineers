@@ -4,10 +4,14 @@
 The [PEP8 Style Guide](https://peps.python.org/pep-0008/) is a document outlining the Python coding conventions. Following the PEP8 style guide allows Python developers to write more "Pythonic" code.   
 
 #### Indentations   
-PEP8 calls out the use of using **4 spaces per indentation level**. Most Code editors can be set to replace tabs with four spaces.
+PEP8 calls out the use of using **4 spaces per indentation level**. Spaces are preferred over tabs, and most code editors can be set to replace tabs with spaces.
 
+#### Line Length
+Lines of code should be limited to a maxmimum of 79 characters. [Black](https://github.com/psf/black) and [pylint](https://pylint.pycqa.org/en/latest/) are both useful tools for finding and correcting lines are that are too long.
 
-### The Zen of Python
+#### 
+
+## The Zen of Python
 ```
 Beautiful is better than ugly.
 Explicit is better than implicit.
