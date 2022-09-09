@@ -4,7 +4,9 @@
 The [PEP8 Style Guide](https://peps.python.org/pep-0008/) is a document outlining the Python coding conventions. Following the PEP8 style guide allows Python developers to write more "Pythonic" code.   
 
 #### Indentations   
-* PEP8 calls out the use of using **4 spaces per indentation level**. Spaces are preferred over tabs, and most code editors can be set to replace tabs with spaces.
+* PEP8 calls out the use of using **4 spaces per indentation level**. 
+* Spaces are preferred over tabs, unless the code is already indented with tabs.
+* Most code editors can be set to replace tabs with spaces.
 
 #### Line Length
 * Lines of code should be limited to a maxmimum of 79 characters. 
@@ -17,10 +19,43 @@ The [PEP8 Style Guide](https://peps.python.org/pep-0008/) is a document outlinin
 * Classes should use CapWords/CamelCase (ex: NetworkDevice)
 * Constants should be all capitals with underscores separating words (ex: MAX_LENGTH).
 * Package and Module names should be short and all lowercase with underscores separating words. (my_math_stuff.py)
-* Single letters: Never use lowercase l (el), uppercase I (eye), uppercase O (oh). These can be ambiguous. 
+* Single letters: Never use lowercase l (el), uppercase I (eye), uppercase O (oh). These can be ambiguous and are best avoided. 
+
+#### Comments
+* Comments should be complete sentences.
+* Use two spaces between sentences for multi-line comments.
+* Inline comments should be used sparingly
+   ```python
+   ip_address = get_ip_address()     # This is an inline comment
+   ```
+* Comments should always be up to date with the code. Inaccurate comments are worse than no comments.
 
 #### Imports
+* Imports should generally be on separate lines.
+* Imports always go on top of the file, just after any module comments or docstrings.
+* Import order matters:
+  * Standard library imports come first.
+  * Related third party imports come second.
+  * Local application/library specific imports come last.
+* Imports should be in alphabetical order.
+* Blank lines are often used to separate standard library and third party imports.
 
+Example Imports:
+```python
+"""
+Module docstring...
+"""
+
+import getpass
+import os
+
+import rich
+import scrapli
+
+from network_devices import router1
+
+...
+```
 
 ## The Zen of Python
 ```
